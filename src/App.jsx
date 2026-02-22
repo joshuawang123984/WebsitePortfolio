@@ -1,5 +1,3 @@
-import Cursor from "./components/Cursor"
-
 function App() {
 
   return (
