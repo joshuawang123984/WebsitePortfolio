@@ -1,6 +1,9 @@
+import Block from "../Block"
+import Cursor from "../Cursor"
+
 export default function Header() {
     return (
-        <Block cmd="whoami">
+        <Block cmnd="whoami">
             <p className="text-green-200 text-xl font-bold tracking-widest">
                 Joshua Wang<Cursor />
             </p>
