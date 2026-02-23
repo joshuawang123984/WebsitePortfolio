@@ -4,3 +4,9 @@ const commands = {
     "help": <Help />,
     "clear": null
 }
+
+export default function Commands() {
+    return (<>
+        
+    </>);
+}
