@@ -3,6 +3,7 @@ import Links from "./TerminalComponents/Links"
 import Skills from "./TerminalComponents/Skills"
 import Education from "./TerminalComponents/Education"
 import IdlePrompt from "./IdlePrompt"
+import Experience from "./TerminalComponents/Experience"
 
 export default function Terminal() {
     return (
@@ -11,7 +12,9 @@ export default function Terminal() {
             <Links />
             <Skills />
             <Education />
-            <IdlePrompt />
+            {/* <IdlePrompt /> */}
+
+            <Experience />
         </div>
     )
 }

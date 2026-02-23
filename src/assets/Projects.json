@@ -1,0 +1,17 @@
+[
+    {
+        "name": "TV Show Recommendation",
+        "description": "Transformer-based ML recommender system",
+        "github": "https://github.com/joshuawang123984/ShowRecommendation"
+    },
+    {
+        "name": "Character-Level Language Model",
+        "description": "MLP trained on 32,000+ names",
+        "github": "https://github.com/joshuawang123984/WordGenerator"
+    },
+    {
+        "name": "Health and Fitness Club Management System",
+        "description": "Full-stack fitness management system",
+        "github": "https://github.com/joshuawang123984/FITNESS_DATABASE"
+    }
+]

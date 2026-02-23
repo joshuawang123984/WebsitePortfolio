@@ -1,5 +1,6 @@
 import TitleBar from "./components/TitleBar";
 import Terminal from "./components/Terminal";
+import Experience from "./components/TerminalComponents/Experience";
 
 function App() {
 
