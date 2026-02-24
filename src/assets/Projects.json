@@ -3,13 +3,13 @@
         "name": "TV Show Recommendation",
         "description": "Transformer-based ML recommender system",
         "github": "https://github.com/joshuawang123984/ShowRecommendation",
-        "tech": ["Python", "PyTorch", "NumPy", "Flask", "React"]
+        "tech": ["Python", "PyTorch", "NumPy", "Flask", "React", "Tailwind CSS"]
     },
     {
         "name": "HealthyOrNot",
         "description": "End-to-end ML pipeline that benchmarks 10+ models using k-fold cross-validation to predict health outcomes from UCI and Kaggle datasets.",
         "github": "https://github.com/joshuawang123984/HealthyOrNot",
-        "tech": ["Python", "PyTorch", "Scikit-Learn", "React", "Tailwind CSS"]
+        "tech": ["Python", "PyTorch", "Scikit-Learn", "Flask", "React", "TypeScript", "Tailwind CSS"]
     },
     {
         "name": "Character-Level Language Model",
