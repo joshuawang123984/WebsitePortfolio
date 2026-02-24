@@ -6,6 +6,12 @@
         "tech": ["Python", "PyTorch", "NumPy", "Flask", "React"]
     },
     {
+        "name": "HealthyOrNot",
+        "description": "End-to-end ML pipeline that benchmarks 10+ models using k-fold cross-validation to predict health outcomes from UCI and Kaggle datasets.",
+        "github": "https://github.com/joshuawang123984/HealthyOrNot",
+        "tech": ["Python", "PyTorch", "Scikit-Learn", "React", "Tailwind CSS"]
+    },
+    {
         "name": "Character-Level Language Model",
         "description": "MLP trained on 32,000+ names",
         "github": "https://github.com/joshuawang123984/WordGenerator",

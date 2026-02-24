@@ -27,8 +27,8 @@ export default function Terminal() {
             <Links />
             <Skills />
             <Education />
-            
-            {/* change this to prompt, its going to be dynamic rather than idle */}
+
+            {/* change this to prompt, its going to be dynamic rather than idle. also, have it start withthe cmnd "help (press enter to run) as default text, and as long as the cmnd starts with "help", then call the help method. just check the first 4 chars ig"*/}
             {/* <IdlePrompt handleInput={handleUserInput}/> */}
 
             {true && <Experience />}
