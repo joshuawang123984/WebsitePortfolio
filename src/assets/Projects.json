@@ -2,7 +2,7 @@
     {
         "name": "TV Show Recommendation",
         "description": "Transformer-based ML recommender system",
-        "github": "https://github.com/joshuawang123984/ShowRecommendation",
+        "github": "https://github.com/joshuawang123984/TVShowRecommendation",
         "tech": ["Python", "PyTorch", "NumPy", "Flask", "React", "Tailwind CSS"]
     },
     {
