@@ -7,6 +7,7 @@ export default function Header() {
                 Joshua Wang
             </p>
             <p className="text-green-600 text-sm mt-1">Software Developer · CS @ Carleton</p>
+            <p className="py-4">Hi there! I'm Joshua Wang, a Software Developer attending Carleton University. I focus on ML systems, full-stack applications, and data pipelines.</p>
         </Block>
     );
 }
