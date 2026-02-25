@@ -2,25 +2,50 @@ import Header from "./TerminalComponents/Header"
 import Links from "./TerminalComponents/Links"
 import Skills from "./TerminalComponents/Skills"
 import Education from "./TerminalComponents/Education"
-import IdlePrompt from "./IdlePrompt"
 import Experience from "./TerminalComponents/Experience"
-import Projects from "./Projects"
+import Projects from "./TerminalComponents/Projects"
+import Help from "./TerminalComponents/Help"
 
 import { useState } from "react";
 
+const commands = {
+    "show experience": <Experience />,
+    "show projects": <Projects />,
+    "help": <Help />,
+    "clear": null
+}
+
 export default function Terminal() {
     const [userInput, setUserInput] = useState("");
-
-    // may be useful in the future
     const [history, setHistory] = useState([]);
+    const [shown, setShown] = useState(new Set())
 
     function handleUserInput(e) {
-        if (e.key === 'Enter') {
-            const output = commands[userInput.trim().toLowerCase()];
-            setHistory([...history, { cmnd: userInput, output }]);
-            setUserInput("");
+        if (e.key !== 'Enter') return
+
+        const cmnd = userInput.trim().toLowerCase()
+        setUserInput('')
+
+        if (cmnd === 'clear') {
+            setShown(new Set())
+            setHistory([])
+            return
         }
+
+        //check if command already exists in history state
+        if (shown.has(cmnd)) return
+
+        //error line
+        const output = commands[cmnd] ?? (
+            <span className="text-red-400 font-mono text-sm">
+                command not found: {cmnd} — type 'help' for available commands
+            </span>
+        )
+
+        setHistory([...history, { cmnd: cmnd, output }])
+        setShown(new Set([...shown, cmnd]))
     }
+
     return (
         <div className="bg-neutral-950 p-6 text-green-400">
             <Header />
@@ -28,11 +53,24 @@ export default function Terminal() {
             <Skills />
             <Education />
 
-            {/* change this to prompt, its going to be dynamic rather than idle. also, have it start withthe cmnd "help (press enter to run) as default text, and as long as the cmnd starts with "help", then call the help method. just check the first 4 chars ig"*/}
-            {/* <IdlePrompt handleInput={handleUserInput}/> */}
+            {history.map((item, i) => (
+                <div key={i}>
+                    <div className="font-mono text-green-500">joshua@portfolio :~$ {item.cmnd}</div>
+                    {item.output}
+                </div>
+            ))}
 
-            {true && <Experience />}
-            {true && <Projects />}
+            <div className="flex gap-2 font-mono">
+                <span className="text-green-500">joshua@portfolio :~$</span>
+                <input
+                    className="bg-transparent outline-none text-green-400 flex-1 placeholder-gray-600"
+                    value={userInput}
+                    onChange={(e) => setUserInput(e.target.value)}
+                    onKeyDown={handleUserInput}
+                    placeholder="help"
+                    autoFocus
+                />
+            </div>
         </div>
     )
 }

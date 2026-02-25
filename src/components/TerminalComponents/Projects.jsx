@@ -1,5 +1,5 @@
-import Block from "./Block";
-import PROJECTS from "../assets/Projects.json"
+import Block from "../Block";
+import PROJECTS from "../../assets/Projects.json"
 
 export default function Projects() {
     return (
