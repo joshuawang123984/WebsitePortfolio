@@ -1,4 +1,5 @@
 import Block from "../Block";
+import { useState } from "react";
 
 const jobs = [
     {
@@ -14,7 +15,7 @@ const jobs = [
     },
     {
         company: "Bell Canada",
-        role: "Software Developer (Programmer), Solutions Team – BBM",
+        role: "Software Developer, Solutions Team – BBM",
         location: "Toronto, ON",
         date: "May 2024 – September 2024",
         bullets: [
@@ -25,29 +26,48 @@ const jobs = [
     },
 ];
 
+function ExperienceCard({ job }) {
+    const [expanded, setExpanded] = useState(false);
+
+    return (
+        <div className="border border-green-800 p-3 flex flex-col gap-2">
+            <div className="flex justify-between items-center">
+                <span className="text-white font-bold font-mono">{job.company}</span>
+                <div className="flex gap-2 items-center">
+                    <span className="text-green-400 font-mono text-sm">{job.date}</span>
+                    <button
+                        onClick={() => setExpanded(!expanded)}
+                        className="text-xs font-mono px-2 py-1 border border-green-500 text-green-400 hover:bg-green-500 hover:text-black transition-colors"
+                    >
+                        {expanded ? 'hide' : 'info'}
+                    </button>
+                </div>
+            </div>
+            <div className="flex justify-between items-center">
+                <span className="text-green-300 font-mono text-sm italic">{job.role}</span>
+                <span className="text-green-400 font-mono text-sm">{job.location}</span>
+            </div>
+
+            {expanded && (
+                <ul className="mt-2 flex flex-col gap-1">
+                    {job.bullets.map((bullet, i) => (
+                        <li key={i} className="text-green-400 font-mono text-sm flex gap-2">
+                            <span className="text-green-500 mt-0.5">▸</span>
+                            <span>{bullet}</span>
+                        </li>
+                    ))}
+                </ul>
+            )}
+        </div>
+    );
+}
+
 export default function Experience() {
     return (
         <Block cmnd="cat experience.txt">
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-4">
                 {jobs.map((job) => (
-                    <div key={job.company} className="flex flex-col gap-1">
-                        <div className="flex justify-between items-center">
-                            <span className="text-white font-bold font-mono">{job.company}</span>
-                            <span className="text-green-400 font-mono text-sm">{job.date}</span>
-                        </div>
-                        <div className="flex justify-between items-center">
-                            <span className="text-green-300 font-mono text-sm italic">{job.role}</span>
-                            <span className="text-green-400 font-mono text-sm">{job.location}</span>
-                        </div>
-                        <ul className="mt-2 flex flex-col gap-1">
-                            {job.bullets.map((bullet, i) => (
-                                <li key={i} className="text-green-400 font-mono text-sm flex gap-2">
-                                    <span className="text-green-500 mt-0.5">▸</span>
-                                    <span>{bullet}</span>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
+                    <ExperienceCard key={job.company} job={job} />
                 ))}
             </div>
         </Block>
