@@ -64,7 +64,7 @@ function ExperienceCard({ job }) {
 
 export default function Experience() {
     return (
-        <Block cmnd="cat experience.txt">
+        <Block cmnd="cat experience">
             <div className="flex flex-col gap-4">
                 {jobs.map((job) => (
                     <ExperienceCard key={job.company} job={job} />

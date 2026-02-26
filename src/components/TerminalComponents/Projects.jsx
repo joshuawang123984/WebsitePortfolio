@@ -3,7 +3,7 @@ import PROJECTS from "../../assets/Projects.json"
 
 export default function Projects() {
     return (
-        <Block cmnd="ls projects/">
+        <Block cmnd="ls projects">
             <div className="flex flex-col gap-6">
                 {PROJECTS.map((project) => (
                     <div key={project.name} className="flex flex-col gap-1">

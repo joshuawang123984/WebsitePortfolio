@@ -9,11 +9,11 @@ import Help from "./TerminalComponents/Help"
 import { useState } from "react";
 
 const commands = {
-    "show experience": <Experience />,
-    "show projects": <Projects />,
-    "help": <Help />,
-    "clear": null
-}
+    "cat experience.txt": { output: <Experience />, description: "display work experience" },
+    "ls projects": { output: <Projects />, description: "display projects" },
+    "help": { output: null, description: "show available commands" },
+    "clear": { output: null, description: "clear the terminal" },
+};
 
 export default function Terminal() {
     const [userInput, setUserInput] = useState("");
@@ -26,17 +26,21 @@ export default function Terminal() {
         const cmnd = userInput.trim().toLowerCase()
         setUserInput('')
 
+        //check if command already exists in history state
+        if (shown.has(cmnd)) return
+
         if (cmnd === 'clear') {
             setShown(new Set())
             setHistory([])
             return
         }
 
-        //check if command already exists in history state
-        if (shown.has(cmnd)) return
+        if (cmnd === 'help') {
+            commands[cmnd].output = <Help cmnds={commands} />;
+        }
 
         //error line
-        const output = commands[cmnd] ?? (
+        const output = commands[cmnd]?.output ?? (
             <span className="text-red-400 font-mono text-sm">
                 command not found: {cmnd} — type 'help' for available commands
             </span>
