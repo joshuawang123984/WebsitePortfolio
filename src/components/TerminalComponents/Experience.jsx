@@ -15,12 +15,12 @@ const jobs = [
     },
     {
         company: "Bell Canada",
-        role: "Software Developer, Solutions Team – BBM",
+        role: "Software Developer Intern",
         location: "Toronto, ON",
         date: "May 2024 – September 2024",
         bullets: [
             "Supported the Pathway Python web application that automated 5,000+ monthly user email notifications and work-process tracking for internal Bell systems, reducing manual notification effort by 60%.",
-            "Collaborated with a cross-functional team of 8 developers and QA analysts to optimize application performance and workflow efficiency, contributing to a reduction in average processing latency.",
+            "Implemented filtering and sorting functionality for the notification dashboard, enabling efficient navigation across \textbf{5,000+} monthly records and reducing time spent locating specific notifications.",
             "Developed and maintained Python automation workflows for email generation and distribution, integrating REST APIs and implementing CI/CD pipelines with Git and Docker, accelerating email delivery time by 20% and reducing production errors by 15%.",
         ],
     },

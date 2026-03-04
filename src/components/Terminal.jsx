@@ -9,7 +9,7 @@ import Help from "./TerminalComponents/Help"
 import { useState } from "react";
 
 const commands = {
-    "cat experience.txt": { output: <Experience />, description: "display work experience" },
+    "cat experience.txt": { output: <Experience />, description: "display experience" },
     "ls projects": { output: <Projects />, description: "display projects" },
     "help": { output: null, description: "show available commands" },
     "clear": { output: null, description: "clear the terminal" },
