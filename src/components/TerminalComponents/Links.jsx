@@ -30,7 +30,7 @@ export default function Links() {
                     <span className="text-sm">LinkedIn</span>
                 </a>
                 <a
-                    href="https://github.com/joshuawang9999"
+                    href="https://github.com/joshuawang123984"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 px-3 py-2 rounded border border-neutral-700 text-gray-300 hover:border-gray-400 hover:bg-neutral-800 transition-colors"
