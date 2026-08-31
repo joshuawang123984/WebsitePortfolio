@@ -3,6 +3,16 @@ import { useState } from "react";
 
 const jobs = [
     {
+        company: "Government of Canada",
+        role: "Software Developer Intern",
+        location: "Toronto, On",
+        date: "May 2026 – Present",
+        bullets: [
+            "Developed full-stack applications and REST APIs with authentication using TypeScript, React, Next.js, and .NET, including data mapping with Mapster.",
+            "Wrote unit tests for application logic and mappings, and improved CI/CD pipelines with Azure DevOps and SonarQube.",
+        ],
+    },
+    {
         company: "XK Innovate",
         role: "Software Developer Intern",
         location: "Remote",

@@ -3,24 +3,46 @@
         "name": "TV Show Recommendation",
         "description": "Transformer-based ML recommender system",
         "github": "https://github.com/joshuawang123984/TVShowRecommendation",
-        "tech": ["Python", "PyTorch", "NumPy", "Flask", "React", "Tailwind CSS"]
+        "tech": [
+            "Python",
+            "PyTorch",
+            "NumPy",
+            "Flask",
+            "React",
+            "Tailwind CSS"
+        ]
     },
     {
         "name": "HealthyOrNot",
         "description": "End-to-end ML pipeline that benchmarks 10+ models using k-fold cross-validation to predict health outcomes from UCI and Kaggle datasets.",
         "github": "https://github.com/joshuawang123984/HealthyOrNot",
-        "tech": ["Python", "PyTorch", "Scikit-Learn", "Flask", "React", "TypeScript", "Tailwind CSS"]
+        "tech": [
+            "Python",
+            "PyTorch",
+            "Scikit-Learn",
+            "Flask",
+            "React",
+            "TypeScript",
+            "Tailwind CSS"
+        ]
     },
     {
-        "name": "Character-Level Language Model",
-        "description": "MLP trained on 32,000+ names",
-        "github": "https://github.com/joshuawang123984/WordGenerator",
-        "tech": ["Python", "PyTorch", "NumPy"]
+        "name": "Bytecode VM",
+        "description": "Implemented a tree-walking interpreter and a from-scratch bytecode compiler/VM in C++",
+        "github": "https://github.com/joshuawang123984/CustomCompiler",
+        "tech": [
+            "C++17"
+        ]
     },
     {
         "name": "Health and Fitness Club Management System",
         "description": "Full-stack fitness management system",
         "github": "https://github.com/joshuawang123984/FITNESS_DATABASE",
-        "tech": ["Python", "PostgreSQL", "SQLAlchemy", "Tkinter"]
+        "tech": [
+            "Python",
+            "PostgreSQL",
+            "SQLAlchemy",
+            "Tkinter"
+        ]
     }
 ]
