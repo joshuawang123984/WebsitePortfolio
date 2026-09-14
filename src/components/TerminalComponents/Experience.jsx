@@ -6,10 +6,18 @@ const jobs = [
         company: "Government of Canada",
         role: "Software Developer Intern",
         location: "Toronto, On",
-        date: "May 2026 – Present",
+        date: "Sept 2026 – Present",
         bullets: [
-            "Developed full-stack applications and REST APIs with authentication using TypeScript, React, Next.js, and .NET, including data mapping with Mapster.",
-            "Wrote unit tests for application logic and mappings, and improved CI/CD pipelines with Azure DevOps and SonarQube.",
+            "Independently leading the migration of ICAM from legacy Drupal PHP to a TypeScript/Next.js SPA, designing authentication flows and an integration layer for restricted backend APIs."
+        ],
+    },
+    {
+        company: "Government of Canada",
+        role: "Software Developer Intern",
+        location: "Toronto, On",
+        date: "May 2026 – Sept",
+        bullets: [
+            "Rewrote and expanded unit-test coverage for RSP-Core, diagnosing failures across application logic and Mapster object mappings between Dataverse entities and DTOs."
         ],
     },
     {
@@ -19,19 +27,6 @@ const jobs = [
         date: "June 2025 – September 2025",
         bullets: [
             "Engineered a Python data pipeline with Pandas and NumPy that processed 100,000+ accelerometer and gyroscope readings, reducing preprocessing time by 35% and enabling near real-time downstream analysis.",
-            "Expanded a raw acoustic dataset for water-pipe anomaly detection using sliding-window segmentation, signal transformations, and noise augmentation, increasing training data volume by 3× and improving model detection accuracy by up to 12%.",
-            "Built a responsive React frontend styled with Tailwind CSS to visualize accelerometer and gyroscope data, implementing hook-based state management to support real-time motion analysis across x, y, z axes.",
-        ],
-    },
-    {
-        company: "Bell Canada",
-        role: "Software Developer Intern",
-        location: "Toronto, ON",
-        date: "May 2024 – September 2024",
-        bullets: [
-            "Supported the Pathway Python web application that automated 5,000+ monthly user email notifications and work-process tracking for internal Bell systems, reducing manual notification effort by 60%.",
-            "Implemented filtering and sorting functionality for the notification dashboard, enabling efficient navigation across \textbf{5,000+} monthly records and reducing time spent locating specific notifications.",
-            "Developed and maintained Python automation workflows for email generation and distribution, integrating REST APIs and implementing CI/CD pipelines with Git and Docker, accelerating email delivery time by 20% and reducing production errors by 15%.",
         ],
     },
 ];

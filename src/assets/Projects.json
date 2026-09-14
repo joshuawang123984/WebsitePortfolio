@@ -1,5 +1,17 @@
 [
     {
+        "name": "Stock news RAG Assistant",
+        "description": "tracks new articles on stocks and returns sentiment",
+        "github": "https://github.com/joshuawang123984/stock-news",
+        "tech": [
+            "Python",
+            "Qdrant",
+            "llama.cpp",
+            "docker",
+            "AWS"
+        ]
+    },
+    {
         "name": "TV Show Recommendation",
         "description": "Transformer-based ML recommender system",
         "github": "https://github.com/joshuawang123984/TVShowRecommendation",
